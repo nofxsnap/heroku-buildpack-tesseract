@@ -24,7 +24,7 @@ then
    do
      lang="${array[i]}"
      echo $lang 'training data'
-     curl https://tesseract-ocr.googlecode.com/files/tesseract-ocr-$TESSERACT_OCR_DATA_VERSION.$lang.tar.gz \
+     curl http://pkgs.fedoraproject.org/repo/pkgs/tesseract/tesseract-ocr-3.04.01.eng.tar.gz/md5/3562250fe6f4e76229a329166b8ae853/tesseract-ocr-$TESSERACT_OCR_DATA_VERSION.$lang.tar.gz \
   -o - | tar -xz -C $INSTALL_DIR_TRAINING_DATA -f -
 
    done
