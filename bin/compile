@@ -3,7 +3,7 @@ BUILD_DIR=$1
 TESSERACT_OCR_VERSION=3.04.01
 TESSERACT_OCR_DATA_VERSION=3.02
 
-TESSERACT_OCR_TGZ=tesseract-ocr-$TESSERACT_OCR_VERSION.tar.gz
+TESSERACT_OCR_TGZ=tesseract-$TESSERACT_OCR_VERSION.tar.gz
 
 INSTALL_DIR=$BUILD_DIR/vendor/tesseract-ocr/
 INSTALL_DIR_TRAINING_DATA=$BUILD_DIR/vendor/
@@ -24,7 +24,7 @@ then
    do
      lang="${array[i]}"
      echo $lang 'training data'
-     curl http://pkgs.fedoraproject.org/repo/pkgs/tesseract/tesseract-3.04.01.tar.gz/md5/645a21effcf2825a3473849d72a7fd90/tesseract-$TESSERACT_OCR_DATA_VERSION.tar.gz \
+     curl http://pkgs.fedoraproject.org/repo/pkgs/tesseract/tesseract-ocr-$TESSERACT_OCR_DATA_VERSION.$lang.tar.gz/md5/3562250fe6f4e76229a329166b8ae853/tesseract-ocr-$TESSERACT_OCR_DATA_VERSION.$lang.tar.gz \
   -o - | tar -xz -C $INSTALL_DIR_TRAINING_DATA -f -
 
    done
